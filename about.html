@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- Helper Styles -->
+  <link rel="stylesheet" href="css/global-style.css">
+  <link rel="stylesheet" href="css/header-style.css">
+  <!-- Main Style -->
+  <link rel="stylesheet" href="css/about-main.css">
+  <title>About | Comfy</title>
+</head>
+
+<body>
+  <!-- Shopping cart items -->
+  <div class="shopping-cart-container">
+    <div class="shopping-cart">
+      <button class="close-shopping-btn"><i class="fa-solid fa-xmark"></i></button>
+      <p class="title">your bag</p>
+      <ul class="items-added-list">
+        <li class="item" data-price="79.99" data-amount="1">
+          <img src="imgs/product-1.jpeg" alt="product" class="item-pic">
+          <div class="middle">
+            <div class="item-info">
+              <p class="item-title">albany table</p>
+              <p class="item-price">$79.99</p>
+            </div>
+            <button class="remove-item-btn">remove</button>
+          </div>
+          <div class="amount">
+            <button class="increase-btn"><i class="fa-solid fa-angle-up"></i></button>
+            <span class="amount-num">1</span>
+            <button class="decrease-btn"><i class="fa-solid fa-angle-down"></i></button>
+          </div>
+        </li>
+      </ul>
+      <p class="total-price">Total: <span class="total-price-value">$79.99</span></p>
+      <button class="checkout-btn">checkout</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="nav-menu-small-screen">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-links hidden">
+          <li><a href="index.html">home</a></li>
+          <li><a href="products.html">products</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </nav>
+      <p class="logo">comfy</p>
+      <div class="shopping-list-btn">
+        <span class="items-num">0</span>
+        <button class="shopping-logo"><i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about">
+    <div class="section-heading">
+      <div class="container">
+        <h2 class="heading">Home / About</h2>
+      </div>
+    </div>
+    <div class="section-main">
+      <h2 class="title"><span>/</span> our history</h2>
+      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, eveniet molestias
+        facilis
+        necessitatibus laudantium voluptates cumque ut deleniti error minima labore nihil reprehenderit aliquam eum
+        nulla dolorem modi excepturi deserunt quas sit ullam voluptate nam quam. Explicabo ratione id tempora
+        aliquid
+        enim corrupti quo amet aut hic est. Maiores, tempora.</p>
+    </div>
+  </section>
+
+  <!-- Javascript -->
+  <script src="js/header-js.js"></script>
+  <script type="module" src="js/about-app.js"></script>
+</body>
+
+</html>

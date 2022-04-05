@@ -1,0 +1,123 @@
+/* Landing */
+.landing {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5) url("../imgs/landing-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  color: white;
+}
+
+main {
+  height: 100%;
+}
+
+main .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+@media (max-width: 767px) {
+  main .container {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.heading {
+  text-transform: capitalize;
+  font-family: "Playball", cursive;
+  font-size: 80px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 767px) {
+  .heading {
+    font-size: 40px;
+  }
+}
+
+.motto {
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 767px) {
+  .motto {
+    font-size: 16px;
+  }
+}
+
+.shop-btn {
+  width: fit-content;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 4px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.shop-btn:hover {
+  background-color: white;
+  color: var(--orange);
+}
+
+@media (max-width: 767px) {
+  .shop-btn {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+}
+
+/* Featured */
+.featured {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: snow;
+}
+
+.featured .title {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #222;
+}
+
+.featured .title span {
+  color: var(--orange);
+}
+
+.featured .products {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.show-all-products {
+  display: block;
+  width: fit-content;
+  border: none;
+  outline: none;
+  margin: 0 auto;
+  color: white;
+  background-color: var(--orange);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.show-all-products:hover {
+  opacity: 85%;
+}

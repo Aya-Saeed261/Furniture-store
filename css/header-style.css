@@ -1,0 +1,408 @@
+header {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--orange);
+}
+
+@media (max-width: 767px) {
+  nav {
+    position: relative;
+  }
+
+  .nav-menu-small-screen {
+    width: 30px;
+    height: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .nav-menu-small-screen .bar {
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+  }
+
+  .nav-menu-small-screen .bar:nth-of-type(2) {
+    width: 50%;
+  }
+
+  .nav-menu-small-screen .bar:not(:nth-of-type(2)) {
+    width: 100%;
+  }
+
+  .nav-menu-small-screen.opened .bar {
+    background-color: var(--orange);
+  }
+
+  .nav-menu-small-screen:hover .bar:nth-of-type(2),
+  .nav-menu-small-screen.opened .bar:nth-of-type(2) {
+    width: 100%;
+  }
+
+  .nav-links {
+    width: 200px;
+    position: absolute;
+    top: 140%;
+    left: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: #333;
+    border-radius: 4px;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid rgb(75, 75, 75);
+    font-size: 18px;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+.logo {
+  font-size: 60px;
+  font-family: "Playball", cursive;
+  text-shadow: 2px 2px 2px black;
+  justify-self: center;
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    font-size: 40px;
+  }
+}
+
+.shopping-list-btn {
+  position: relative;
+  cursor: pointer;
+}
+
+.shopping-logo {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  cursor: inherit;
+}
+
+.items-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Playball", cursive;
+  background-color: var(--orange);
+  color: white;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+@media (max-width: 767px) {
+  .shopping-logo {
+    font-size: 25px;
+  }
+
+  .items-num {
+    width: 22px;
+    height: 22px;
+    top: -10px;
+    right: -10px;
+    font-size: 11px;
+  }
+}
+
+.shopping-cart-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.342);
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  transition: 0.3s;
+  opacity: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.show-shoppping-list {
+  opacity: 1;
+  z-index: 10;
+}
+
+.shopping-cart {
+  width: 40%;
+  height: 100%;
+  padding: 20px;
+  background-color: #eee;
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.5s;
+}
+
+.show-shoppping-list .shopping-cart {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 767px) {
+  .shopping-cart {
+    width: 100%;
+  }
+}
+
+.shopping-cart button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.shopping-cart .close-shopping-btn {
+  font-size: 28px;
+  color: var(--darkGold);
+  cursor: pointer;
+  align-self: flex-start;
+  transition: 0.3s;
+}
+
+.shopping-cart .close-shopping-btn:hover {
+  opacity: 85%;
+}
+
+.shopping-cart .title {
+  font-family: "Playball", cursive;
+  text-transform: capitalize;
+  font-size: 32px;
+  color: #333;
+}
+
+@media (max-width: 767px) {
+  .shopping-cart .title {
+    font-size: 28px;
+  }
+}
+
+.shopping-cart .items-added-list {
+  list-style: none;
+  width: 100%;
+  overflow-y: scroll;
+  flex: 1;
+  margin: 20px;
+}
+
+.shopping-cart .items-added-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.shopping-cart .items-added-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.shopping-cart .items-added-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #333;
+}
+
+.shopping-cart .items-added-list .item {
+  display: flex;
+  gap: 15px;
+  padding-right: 15px;
+  align-items: center;
+}
+
+.shopping-cart .items-added-list .item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.shopping-cart .items-added-list .item .item-pic {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  .shopping-cart .items-added-list .item .item-pic {
+    width: 70px;
+    height: 50px;
+  }
+}
+
+.shopping-cart .items-added-list .item .middle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.shopping-cart .items-added-list .item .middle .item-title {
+  color: var(--darkGold);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+@media (max-width: 767px) {
+  .shopping-cart .items-added-list .item .middle .item-title {
+    font-size: 13px;
+  }
+}
+
+.shopping-cart .items-added-list .item .middle .item-price {
+  color: #333;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+@media (max-width: 767px) {
+  .shopping-cart .items-added-list .item .middle .item-price {
+    font-size: 12px;
+  }
+}
+
+.shopping-cart .items-added-list .item .middle .remove-item-btn {
+  cursor: pointer;
+  letter-spacing: 1px;
+  color: brown;
+  transition: 0.3s;
+}
+
+.shopping-cart .items-added-list .item .middle .remove-item-btn:hover {
+  opacity: 70%;
+}
+
+@media (max-width: 767px) {
+  .shopping-cart .items-added-list .item .middle .remove-item-btn {
+    font-size: 12px;
+  }
+}
+
+.shopping-cart .items-added-list .item .amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopping-cart .items-added-list .item .amount button {
+  color: var(--orange);
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.shopping-cart .items-added-list .item .amount button:hover {
+  opacity: 70%;
+}
+
+.shopping-cart .items-added-list .item .amount .amount-num {
+  color: #333;
+}
+
+@media (max-width: 767px) {
+  .shopping-cart .items-added-list .item .amount .amount-num {
+    font-size: 14px;
+  }
+}
+
+.shopping-cart .total-price {
+  font-family: "Playball", cursive;
+  font-size: 30px;
+  color: #333;
+}
+
+@media (max-width: 767px) {
+  .shopping-cart .total-price {
+    font-size: 25px;
+  }
+}
+
+.shopping-cart .total-price .total-price-value {
+  color: var(--orange);
+  font-size: 25px;
+}
+
+@media (max-width: 767px) {
+  .shopping-cart .total-price .total-price-value {
+    font-size: 20px;
+  }
+}
+
+.shopping-cart .checkout-btn {
+  background-color: var(--orange);
+  cursor: pointer;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.shopping-cart .checkout-btn:hover {
+  opacity: 85%;
+}
+
+@media (max-width: 767px) {
+  .shopping-cart .checkout-btn {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+}

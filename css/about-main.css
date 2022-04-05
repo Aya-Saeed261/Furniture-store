@@ -1,0 +1,96 @@
+/* Header */
+header {
+  background-color: white;
+}
+
+header .nav-links a,
+header .logo,
+header .shopping-logo {
+  color: rgb(6, 6, 37);
+}
+
+header .logo {
+  text-shadow: 1px 1px 2px black;
+}
+
+@media (max-width: 767px) {
+  .nav-menu-small-screen .bar {
+    background-color: rgb(6, 6, 37);
+  }
+
+  .nav-links li a {
+    color: white;
+  }
+}
+
+/* About */
+.about {
+  margin-top: 120px;
+  height: calc(100vh - 120px);
+  color: #333;
+}
+
+.section-heading {
+  height: 100px;
+  background-color: #eee;
+}
+
+.section-heading .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.section-heading .container .heading {
+  font-size: 27px;
+  color: var(--darkGold);
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+@media (max-width: 767px) {
+  .section-heading .container .heading {
+    font-size: 20px;
+  }
+}
+
+.section-main {
+  min-height: calc(100vh - 220px);
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-main .title {
+  text-transform: capitalize;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #222;
+}
+
+.section-main .title span {
+  color: var(--orange);
+}
+
+@media (max-width: 767px) {
+  .section-main .title {
+    font-size: 28px;
+  }
+}
+
+.section-main .description {
+  line-height: 1.8;
+  color: #777;
+  width: 60%;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .section-main .description {
+    width: 90%;
+    text-align: center;
+  }
+}

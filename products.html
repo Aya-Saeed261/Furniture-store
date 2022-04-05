@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- Helper Styles -->
+  <link rel="stylesheet" href="css/global-style.css">
+  <link rel="stylesheet" href="css/header-style.css">
+  <link rel="stylesheet" href="css/products-style.css">
+  <!-- Main Style -->
+  <link rel="stylesheet" href="css/products-main.css">
+  <title>Products | Comfy</title>
+</head>
+
+<body>
+  <!-- Shopping cart items -->
+  <div class="shopping-cart-container">
+    <div class="shopping-cart">
+      <button class="close-shopping-btn"><i class="fa-solid fa-xmark"></i></button>
+      <p class="title">your bag</p>
+      <ul class="items-added-list">
+      </ul>
+      <p class="total-price">Total: <span class="total-price-value">$79.99</span></p>
+      <button class="checkout-btn">checkout</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="nav-menu-small-screen">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-links hidden">
+          <li><a href="index.html">home</a></li>
+          <li><a href="#">products</a></li>
+          <li><a href="about.html">about</a></li>
+        </ul>
+      </nav>
+      <p class="logo">comfy</p>
+      <div class="shopping-list-btn">
+        <span class="items-num">0</span>
+        <button class="shopping-logo"><i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Products -->
+  <section class="all-products">
+    <div class="section-heading">
+      <div class="container">
+        <p class="heading">Home / Products</p>
+      </div>
+    </div>
+    <div class="section-content">
+      <div class="container">
+        <div class="filter">
+          <input type="search" name="search" id="search" placeholder="search...">
+          <div class="categories-container">
+            <h2 class="title">Company <i class="fa-solid fa-angle-down closed-list"></i>
+              <i class="fa-solid fa-angle-up open-list hidden"></i>
+            </h2>
+            <ul class="categories hidden">
+              <li data-group="all" class="active">all</li>
+              <li data-group="ikea">ikea</li>
+              <li data-group="marcos">marcos</li>
+              <li data-group="caressa">caressa</li>
+              <li data-group="liddy">liddy</li>
+            </ul>
+          </div>
+          <div class="price-filter">
+            <div class="input-container">
+              <label for="price">Price</label>
+              <input type="range" name="price" id="price" min="0" max="80" value="80">
+            </div>
+            <p class="current-price">Value: <span class="price-value">$80</span></p>
+          </div>
+        </div>
+        <div class="products">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Javascript -->
+  <script src="js/header-js.js"></script>
+  <script type="module" src="js/products-js.js"></script>
+  <script src="js/products-app.js"></script>
+</body>
+
+</html>

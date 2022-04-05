@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- Helper Styles -->
+  <link rel="stylesheet" href="css/global-style.css">
+  <link rel="stylesheet" href="css/header-style.css">
+  <link rel="stylesheet" href="css/products-style.css">
+  <!-- Main Style -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>Home | Comfy</title>
+</head>
+
+<body>
+  <!-- Shopping cart items -->
+  <div class="shopping-cart-container">
+    <div class="shopping-cart">
+      <button class="close-shopping-btn"><i class="fa-solid fa-xmark"></i></button>
+      <p class="title">your bag</p>
+      <ul class="items-added-list">
+      </ul>
+      <p class="total-price">Total: <span class="total-price-value">$0.00</span></p>
+      <button class="checkout-btn">checkout</button>
+    </div>
+  </div>
+
+  <!-- Landing -->
+  <section class="landing">
+    <header>
+      <div class="container">
+        <nav>
+          <div class="nav-menu-small-screen">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="nav-links hidden">
+            <li><a href="#">home</a></li>
+            <li><a href="products.html">products</a></li>
+            <li><a href="about.html">about</a></li>
+          </ul>
+        </nav>
+        <p class="logo">comfy</p>
+        <div class="shopping-list-btn">
+          <span class="items-num">0</span>
+          <button class="shopping-logo"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h1 class="heading">rest, relax, unwind</h1>
+        <p class="motto">Embrace your choices - we do</p>
+        <a href="products.html" class="shop-btn">shop now</a>
+      </div>
+    </main>
+  </section>
+
+  <!-- Featured -->
+  <section class="featured">
+    <div class="container">
+      <h2 class="title"><span>/</span> Featured</h2>
+      <div class="products">
+        <div class="product-container">
+          <div class="product">
+            <img src="imgs/product-1.jpeg" alt="product" class="product-pic">
+            <div class="overlay">
+              <button><i class="fa-solid fa-magnifying-glass more-info" data-name="High-Back Bench"></i></button>
+              <button><i class="fa-solid fa-cart-shopping add-to-cart"></i></button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-title">High-Back Bench</p>
+            <p class="product-price">$ 19.99</p>
+          </div>
+        </div>
+        <div class="product-container">
+          <div class="product">
+            <img src="imgs/product-2.jpeg" alt="product" class="product-pic">
+            <div class="overlay">
+              <button><i class="fa-solid fa-magnifying-glass more-info" data-name="Albany Table"></i></button>
+              <button><i class="fa-solid fa-cart-shopping add-to-cart"></i></button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-title">Albany Table</p>
+            <p class="product-price">$ 79.99</p>
+          </div>
+        </div>
+        <div class="product-container">
+          <div class="product">
+            <img src="imgs/product-3.jpeg" alt="product" class="product-pic">
+            <div class="overlay">
+              <button><i class="fa-solid fa-magnifying-glass more-info" data-name="Wooden Table"></i></button>
+              <button><i class="fa-solid fa-cart-shopping add-to-cart"></i></button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-title">Wooden Table</p>
+            <p class="product-price">$ 45.99</p>
+          </div>
+        </div>
+      </div>
+      <a href="products.html" class="show-all-products">all products</a>
+    </div>
+  </section>
+
+  <!-- Javascript -->
+  <script type="module" src="js/products-js.js"></script>
+  <script src="js/header-js.js"></script>
+</body>
+
+</html>
